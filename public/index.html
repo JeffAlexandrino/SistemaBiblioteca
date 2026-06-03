@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Sistema de Biblioteca</h1>
+
+    <section>
+        <h2>Cadastrar Livro</h2>
+
+        <input id="titulo" placeholder="Título">
+        <input id="autor" placeholder="Autor">
+        <input id="ano" placeholder="Ano">
+        <input id="quantidade" placeholder="Quantidade">
+
+        <button onclick="cadastrarLivro()">
+            Cadastrar
+        </button>
+    </section>
+
+    <section>
+        <h2>Livros</h2>
+        <ul id="listaLivros"></ul>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Novo Empréstimo</h2>
+
+        <input id="usuario" placeholder="Nome do usuário">
+
+        <select id="livroSelect"></select>
+
+        <button onclick="emprestarLivro()">
+            Emprestar
+        </button>
+    </section>
+
+    <section>
+        <h2>Empréstimos</h2>
+        <ul id="listaEmprestimos"></ul>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
