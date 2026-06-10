@@ -3,50 +3,83 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Biblioteca</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Biblioteca</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Sistema de Biblioteca</h1>
+    <div class="container">
+        <header>
+            <h1>Sistema de Biblioteca</h1>
+        </header>
 
-    <section>
-        <h2>Cadastrar Livro</h2>
+        <main>
+            <section class="card form-section">
+                <h2>Cadastrar Novo Livro</h2>
+                <div class="form-grid">
+                    <input id="titulo" placeholder="Título do Livro">
+                    <input id="autor" placeholder="Autor">
+                    <input id="ano" placeholder="Ano de Publicação">
+                    <input id="quantidade" placeholder="Qtd. Estágio">
+                </div>
+                <button class="btn-primary" onclick="cadastrarLivro()">
+                    Cadastrar Livro
+                </button>
+            </section>
 
-        <input id="titulo" placeholder="Título">
-        <input id="autor" placeholder="Autor">
-        <input id="ano" placeholder="Ano">
-        <input id="quantidade" placeholder="Quantidade">
+            <section class="card table-section">
+                <h2>Catálogo de Livros</h2>
+                <table id="tabelaLivros">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Ano</th>
+                            <th>Estoque</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabelaLivros">
+                    </tbody>
+                </table>
+            </section>
 
-        <button onclick="cadastrarLivro()">
-            Cadastrar
-        </button>
-    </section>
+            <hr>
 
-    <section>
-        <h2>Livros</h2>
-        <ul id="listaLivros"></ul>
-    </section>
+            <section class="card form-section">
+                <h2>Registrar Novo Empréstimo</h2>
+                <div class="form-group">
+                    <label for="usuario">Usuário:</label>
+                    <input id="usuario" placeholder="Nome do usuário">
+                </div>
+                <div class="form-group">
+                    <label for="livroSelect">Livro:</label>
+                    <select id="livroSelect"></select>
+                </div>
+                <button class="btn-secondary" onclick="emprestarLivro()">
+                    Realizar Empréstimo
+                </button>
+            </section>
 
-    <hr>
-
-    <section>
-        <h2>Novo Empréstimo</h2>
-
-        <input id="usuario" placeholder="Nome do usuário">
-
-        <select id="livroSelect"></select>
-
-        <button onclick="emprestarLivro()">
-            Emprestar
-        </button>
-    </section>
-
-    <section>
-        <h2>Empréstimos</h2>
-        <ul id="listaEmprestimos"></ul>
-    </section>
+            <section class="card table-section">
+                <h2>Histórico de Empréstimos</h2>
+                <table id="tabelaEmprestimos">
+                    <thead>
+                        <tr>
+                            <th>Usuário</th>
+                            <th>Título</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabelaEmprestimos">
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 
