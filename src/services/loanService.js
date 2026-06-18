@@ -7,8 +7,10 @@ class LoanService {
         this.observers.push(observer);
     }
 
-    notify(event, data) {
-        this.observers.forEach(observer => observer.update(event, data));
+    async notify(event, data) {
+        for (const observer of this.observers) {
+            await observer.update(event, data);
+        }
     }
 }
 
