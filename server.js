@@ -19,7 +19,7 @@ loanService.subscribe(new NotificationObserver());
 
 const db = dbInstance.getConnection();
 
-// ─── HELPERS SIMPLIFICADOS ────────────────────────────────────────────────
+// HELPERS SIMPLIFICADOS
 
 function dbAll(sql, params = []) {
     return new Promise((resolve, reject) => {
@@ -48,7 +48,7 @@ function dbRun(sql, params = []) {
     });
 }
 
-// ─── ROTAS ──────────────────────────────────────────────────────────────────
+// ROTAS 
 
 // LISTAR LIVROS
 app.get("/livros", async (req, res) => {
@@ -115,7 +115,7 @@ app.delete("/livros/:id", async (req, res) => {
 // LISTAR EMPRÉSTIMOS
 app.get("/emprestimos", async (req, res) => {
     try {
-        console.log("📋 Buscando empréstimos...");
+        console.log("Buscando empréstimos...");
         const emprestimos = await dbAll("SELECT * FROM emprestimos ORDER BY id DESC");
         const livros = await dbAll("SELECT id, titulo FROM livros");
 

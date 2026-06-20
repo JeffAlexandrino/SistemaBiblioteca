@@ -16,7 +16,7 @@
             <section class="card form-section">
                 <h2>Cadastrar Novo Livro</h2>
                 <div class="form-grid">
-                    <input id="titulo" placeholder="Título do Livro">
+                    <input id="titulo" placeholder="Título">
                     <input id="autor" placeholder="Autor">
                     <input id="ano" placeholder="Ano de Publicação">
                     <input id="quantidade" placeholder="Qtd. Estoque">
@@ -24,7 +24,7 @@
                 <div class="form-group" style="margin-bottom: 20px;">
                     <label>
                         <input type="checkbox" id="disponivelVenda">
-                        Disponível para Venda
+                        Para Venda:
                     </label>
                 </div>
                 <button class="btn-primary" onclick="cadastrarLivro()">
@@ -52,7 +52,7 @@
             <hr>
 
             <section class="card form-section">
-                <h2>Registrar Novo Empréstimo</h2>
+                <h2>Registrar Empréstimo ou Venda</h2>
                 <div class="form-group">
                     <label for="usuario">Usuário:</label>
                     <input id="usuario" placeholder="Nome do usuário">
@@ -62,7 +62,7 @@
                     <select id="livroSelect"></select>
                 </div>
                 <button class="btn-secondary" onclick="emprestarLivro()">
-                    Realizar Empréstimo/Venda
+                    Registrar 
                 </button>
 
             </section>

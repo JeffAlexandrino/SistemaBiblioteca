@@ -180,7 +180,7 @@ async function carregarEmprestimos() {
 }
 
 async function devolver(id) {
-    if (!confirm("Deseja realmente devolver este livro?")) return;
+    if (!confirm("Deseja devolver este livro?")) return;
 
     try {
         const response = await fetch(`/emprestimos/${id}/devolver`, {
@@ -193,7 +193,7 @@ async function devolver(id) {
             return;
         }
 
-        alert("✅ Livro devolvido com sucesso!");
+        alert("Livro devolvido com sucesso!");
         await carregarEmprestimos();
         await carregarLivros();
     } catch (error) {
