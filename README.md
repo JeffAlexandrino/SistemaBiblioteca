@@ -105,11 +105,13 @@ No protótipo inicial (MVP), foram mapeados pontos com alto nível de acoplament
 - ❌ Não têm controle de estoque
 - ❌ Não podem ser emprestados (apenas "comprados" conceitualmente)
 - ❌ Não podem ser devolvidos
-```
+
+---
 
 ## Ferramentas de IA Utilizadas
 
 - **ChatGPT:** Auxílio na implementação e esclarecimento de dúvidas conceituais. Resolução de escopo e caminhos de arquivos em ambiente Linux. Correção de bugs relacionados ao controle de estoque e devolução de livros.
+- **Claude Code**: Correção de bugs de javascript e criação de estilização (style.css).
 
 ---
 
